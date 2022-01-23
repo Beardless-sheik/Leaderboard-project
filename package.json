@@ -1,0 +1,19 @@
+{
+  "name": "leaderboard-project",
+  "version": "0.1.0",
+  "description": "# To Do List",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beardless-sheik/Leaderboard-project.git"
+  },
+  "author": "Alick Nyirenda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beardless-sheik/Leaderboard-project/issues"
+  },
+  "homepage": "https://github.com/Beardless-sheik/Leaderboard-project#readme"
+}
