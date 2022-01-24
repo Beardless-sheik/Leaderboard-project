@@ -15,7 +15,6 @@ let scoresArray = [];
 const submitFormFunction = async (event) => {
   event.preventDefault();
   await addScore(nameInput.value, scoreInput.value, apiEndPoint, gameID, serverMessageElement);
-  // saveToLocalStorage(scoresArray);
   scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
   renderScores(scoresArray, scoreUlContainer);
   scoreForm.reset();
