@@ -7,7 +7,7 @@ const renderScores = (scoresArray, htmlParentToRenderTo) => {
       if (index % 2 === 0) {
         htmlParentToRenderTo.innerHTML += `<li> ${element.user}: ${element.score} </li>`;
       } else {
-        htmlParentToRenderTo.innerHTML += `<li class="colured-background"> ${element.name}: ${element.score} </li>`;
+        htmlParentToRenderTo.innerHTML += `<li class="colured-background"> ${element.user}: ${element.score} </li>`;
       }
     });
   }
