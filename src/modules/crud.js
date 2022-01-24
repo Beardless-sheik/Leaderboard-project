@@ -18,6 +18,9 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
     responseFromServer = error.message;
   });
   htmlElementToPostSuccesfulMessage.innerHTML = responseFromServer;
+  setTimeout(() => {
+    htmlElementToPostSuccesfulMessage.innerHTML = '';
+  }, 6000);
 };
 
 const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage) => {
@@ -33,6 +36,10 @@ const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage)
       console.log(error);
       htmlElementToPostSuccesfulMessage.innerHTML = 'error connecting to the server';
     });
+  setTimeout(() => {
+    htmlElementToPostSuccesfulMessage.innerHTML = '';
+    console.log('remove error message');
+  }, 6000);
   if (response === undefined) {
     return [{
       name: 'Failed to connect to server to get Names',
