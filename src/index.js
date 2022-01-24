@@ -9,19 +9,26 @@ const scoreForm = document.querySelector('.form-container');
 const nameInput = document.querySelector('#userName');
 const scoreInput = document.querySelector('#userScore');
 const scoreUlContainer = document.querySelector('#results-container');
+const refreshButton = document.querySelector('#refresh-button');
 
 let scoresArray = [];
 
 const submitFormFunction = async (event) => {
   event.preventDefault();
   await addScore(nameInput.value, scoreInput.value, apiEndPoint, gameID, serverMessageElement);
-  // saveToLocalStorage(scoresArray);
   scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
   renderScores(scoresArray, scoreUlContainer);
   scoreForm.reset();
 };
 
+const refreshScore = async (event) => {
+  event.preventDefault();
+  scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
+  renderScores(scoresArray, scoreUlContainer);
+};
+
 scoreForm.addEventListener('submit', submitFormFunction);
+refreshButton.addEventListener('click', refreshScore)
 window.addEventListener('load', async () => {
   scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
   renderScores(scoresArray, scoreUlContainer);
