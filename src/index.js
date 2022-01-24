@@ -1,5 +1,4 @@
 import './style.css';
-import { saveToLocalStorage, retrieveFromLocalStorage } from './modules/localStorage.js';
 import renderScores from './modules/render.js';
 import { addScore, getScores } from './modules/crud.js';
 
@@ -23,9 +22,7 @@ const submitFormFunction = async (event) => {
 };
 
 scoreForm.addEventListener('submit', submitFormFunction);
-window.addEventListener('load', async() => {
-  // scoresArray = retrieveFromLocalStorage();
+window.addEventListener('load', async () => {
   scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
-  console.log(scoresArray);
   renderScores(scoresArray, scoreUlContainer);
 });
