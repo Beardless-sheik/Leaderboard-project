@@ -1,10 +1,11 @@
 const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSuccesfulMessage) => {
+  const url = `${apiEndPoint}${idLink}scores/`;
   const newScoreObject = {
     user: name,
     score,
   };
   let responseFromServer = '';
-  await fetch(`${apiEndPoint}${idLink}/scores/`, {
+  await fetch(url, {
     method: 'POST',
     body: JSON.stringify(newScoreObject),
     headers: {
@@ -19,4 +20,26 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
   htmlElementToPostSuccesfulMessage.innerHTML = responseFromServer;
 };
 
-export default addScore;
+const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage) => {
+  const url = `${apiEndPoint}${idLink}scores/`;
+  const response = await fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      htmlElementToPostSuccesfulMessage.innerHTML = 'Scores collected from the server (server message to disappear in 5 sec)';
+      console.log(data.result);
+      return data.result;
+    })
+    .catch((error) => {
+      console.log(error);
+      htmlElementToPostSuccesfulMessage.innerHTML = 'error connecting to the server';
+    });
+  if (response === undefined) {
+    return [{
+      name: 'Failed to connect to server to get Names',
+      score: 'Failed to connect to server to get Scores',
+    }];
+  }
+  return response;
+};
+
+export { addScore, getScores };
