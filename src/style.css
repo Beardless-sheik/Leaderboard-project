@@ -42,3 +42,7 @@ ul li.colured-background {
   justify-self: end;
   border: 2px solid black;
 }
+
+.server-message {
+  color: rgb(194, 36, 36);
+}
