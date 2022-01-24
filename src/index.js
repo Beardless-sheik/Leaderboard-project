@@ -28,7 +28,7 @@ const refreshScore = async (event) => {
 };
 
 scoreForm.addEventListener('submit', submitFormFunction);
-refreshButton.addEventListener('click', refreshScore)
+refreshButton.addEventListener('click', refreshScore);
 window.addEventListener('load', async () => {
   scoresArray = await getScores(apiEndPoint, gameID, serverMessageElement);
   renderScores(scoresArray, scoreUlContainer);
