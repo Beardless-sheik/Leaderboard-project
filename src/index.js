@@ -8,15 +8,16 @@ const nameInput = document.querySelector('#userName');
 const scoreInput = document.querySelector('#userScore');
 const scoreUlContainer = document.querySelector('#results-container');
 
-const scoresArray = [];
+let scoresArray = [];
 
 renderScores(scoresArray, scoreUlContainer);
 
 const submitFormFunction = (event) => {
-  // event.preventDefault();
-  // console.log(nameInput.value, scoreInput.value);
-  // scoreForm.reset();
-}
+  event.preventDefault();
+  scoresArray = addScore(nameInput.value, scoreInput.value, scoresArray);
+  saveToLocalStorage(scoresArray);
+  scoreForm.reset();
+};
 
 scoreForm.addEventListener('submit', submitFormFunction);
 // window.addEventListener('load', () => {
