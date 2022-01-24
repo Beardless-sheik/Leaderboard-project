@@ -10,16 +10,16 @@ const scoreUlContainer = document.querySelector('#results-container');
 
 let scoresArray = [];
 
-renderScores(scoresArray, scoreUlContainer);
-
 const submitFormFunction = (event) => {
   event.preventDefault();
   scoresArray = addScore(nameInput.value, scoreInput.value, scoresArray);
   saveToLocalStorage(scoresArray);
+  renderScores(scoresArray, scoreUlContainer);
   scoreForm.reset();
 };
 
 scoreForm.addEventListener('submit', submitFormFunction);
-// window.addEventListener('load', () => {
-//   scoresArray
-// })
+window.addEventListener('load', () => {
+  scoresArray = retrieveFromLocalStorage();
+  renderScores(scoresArray, scoreUlContainer);
+});
