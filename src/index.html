@@ -17,6 +17,7 @@
           Recent Scores: <button type="button" class="btn btn-primary btn-sm">Refresh</button> 
         </p>
         <ul id="results-container" class="results-container text-center">
+          <li> Waiting for Server to Return Score Results. Refresh if internet disconnected</li>
         </ul>
       </div>
 
@@ -26,6 +27,7 @@
           <input type="text" name="userName" id="userName" placeholder="Your name" class="user-input" required>
           <input type="number" name="userScore" id="userScore" placeholder="Your score" class="user-input" required>
           <button type="submit" class="btn submit-button"> Submit </button>
+          <p id="space-for-server-message" class="server-message"></p>
         </form>
       </div>
     </div>
