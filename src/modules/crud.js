@@ -11,12 +11,12 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
     headers: {
       'Content-type': 'application/json',
     },
-  }).then((response) => {
-    const data = response.json();
-    responseFromServer = data.result;
-  }).catch((error) => {
-    responseFromServer = error.message;
-  });
+  }).then((response) => response.json())
+    .then((data) => {
+      responseFromServer = data.result;
+    }).catch((error) => {
+      responseFromServer = error.message;
+    });
   htmlElementToPostSuccesfulMessage.innerHTML = responseFromServer;
   setTimeout(() => {
     htmlElementToPostSuccesfulMessage.innerHTML = '';
@@ -29,16 +29,13 @@ const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage)
     .then((res) => res.json())
     .then((data) => {
       htmlElementToPostSuccesfulMessage.innerHTML = 'Scores collected from the server (server message to disappear in 5 sec)';
-      console.log(data.result);
       return data.result;
     })
-    .catch((error) => {
-      console.log(error);
+    .catch(() => {
       htmlElementToPostSuccesfulMessage.innerHTML = 'error connecting to the server';
     });
   setTimeout(() => {
     htmlElementToPostSuccesfulMessage.innerHTML = '';
-    console.log('remove error message');
   }, 6000);
   if (response === undefined) {
     return [{
