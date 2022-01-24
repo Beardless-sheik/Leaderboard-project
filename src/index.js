@@ -1,6 +1,7 @@
 import './style.css';
 import { saveToLocalStorage, retrieveFromLocalStorage } from './modules/localStorage.js';
 import renderScores from './modules/render.js';
+import addScore from './modules/crud.js';
 
 const scoreForm = document.querySelector('.form-container');
 const nameInput = document.querySelector('#userName');
