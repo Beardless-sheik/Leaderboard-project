@@ -3,7 +3,7 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
     user: name,
     score,
   };
-  let responseFromServer = ''
+  let responseFromServer = '';
   await fetch(`${apiEndPoint}${idLink}/scores/`, {
     method: 'POST',
     body: JSON.stringify(newScoreObject),
