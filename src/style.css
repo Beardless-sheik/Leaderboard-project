@@ -1,0 +1,44 @@
+.body {
+  background-color: antiquewhite;
+}
+
+h1 {
+  margin: 10px 40px;
+}
+
+.results-container {
+  padding: 0;
+  border: 1px solid black;
+}
+
+.form-container {
+  margin-top: 3rem;
+  display: grid;
+}
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul li {
+  padding: 12px ;
+  margin: 0;
+}
+
+ul li.colured-background {
+  background-color: rgba(201, 201, 201, 0.678);
+}
+
+.user-input {
+  margin: 10px 5px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.submit-button {
+  margin: 10px;
+  width: 40%;
+  justify-self: end;
+  border: 2px solid black;
+}
