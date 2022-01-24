@@ -1,4 +1,5 @@
 const renderScores = (scoresArray, htmlParentToRenderTo) => {
+  htmlParentToRenderTo.innerHTML = '';
   scoresArray.forEach((element, index) => {
     if (index % 2 === 0) {
       htmlParentToRenderTo.innerHTML += `<li> ${element.name}: ${element.score} </li>`;

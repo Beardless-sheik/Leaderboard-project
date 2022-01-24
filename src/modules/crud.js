@@ -4,6 +4,6 @@ const addScore = (name, score, scoresArray) => {
     score,
   };
   return [...scoresArray, newScoreObject];
-}; 
+};
 
 export default addScore;
