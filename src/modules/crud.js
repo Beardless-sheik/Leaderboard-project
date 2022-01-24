@@ -18,12 +18,6 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
   } catch (error) {
     responseFromServer = error.message;
   }
-  //  .then((response) => response.json())
-  //     .then((data) => {
-  //       responseFromServer = data.result;
-  //     }).catch((error) => {
-  //       responseFromServer = error.message;
-  //     });
   htmlElementToPostSuccesfulMessage.innerHTML = responseFromServer;
   setTimeout(() => {
     htmlElementToPostSuccesfulMessage.innerHTML = '';
@@ -40,14 +34,6 @@ const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage)
   } catch (error) {
     htmlElementToPostSuccesfulMessage.innerHTML = 'error connecting to the server';
   }
-  // .then((res) => res.json())
-  // .then((data) => {
-  //   htmlElementToPostSuccesfulMessage.innerHTML = 'Scores collected from the server (server message to disappear in 5 sec)';
-  //   return data.result;
-  // })
-  // .catch(() => {
-  //   htmlElementToPostSuccesfulMessage.innerHTML = 'error connecting to the server';
-  // });
   setTimeout(() => {
     htmlElementToPostSuccesfulMessage.innerHTML = '';
   }, 6000);
