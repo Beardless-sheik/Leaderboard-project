@@ -2,7 +2,6 @@
   "name": "leaderboard-project",
   "version": "0.1.0",
   "description": "# To Do List",
-  "main": "./src/index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve --mode=development",
@@ -21,9 +20,13 @@
   "homepage": "https://github.com/Beardless-sheik/Leaderboard-project#readme",
   "devDependencies": {
     "@babel/preset-env": "^7.16.11",
+    "babel-eslint": "^10.1.0",
+    "cjs-loader": "^0.1.0",
     "css-loader": "^6.5.1",
     "electron-to-chromium": "^1.4.51",
-    "eslint": "^8.7.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
     "hint": "^6.1.9",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
