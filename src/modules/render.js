@@ -5,7 +5,7 @@ const renderScores = (scoresArray, htmlParentToRenderTo) => {
   } else {
     scoresArray.forEach((element, index) => {
       if (index % 2 === 0) {
-        htmlParentToRenderTo.innerHTML += `<li> ${element.name}: ${element.score} </li>`;
+        htmlParentToRenderTo.innerHTML += `<li> ${element.user}: ${element.score} </li>`;
       } else {
         htmlParentToRenderTo.innerHTML += `<li class="colured-background"> ${element.name}: ${element.score} </li>`;
       }
