@@ -1,0 +1,45 @@
+{
+  "name": "leaderboard-project",
+  "version": "0.1.0",
+  "description": "# To Do List",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve --mode=development",
+    "start": "webpack serve --mode=production",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beardless-sheik/Leaderboard-project.git"
+  },
+  "author": "Alick Nyirenda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beardless-sheik/Leaderboard-project/issues"
+  },
+  "homepage": "https://github.com/Beardless-sheik/Leaderboard-project#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "babel-eslint": "^10.1.0",
+    "cacache": "^15.3.0",
+    "cjs-loader": "^0.1.0",
+    "css-loader": "^6.5.1",
+    "electron-to-chromium": "^1.4.51",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.4",
+    "fast-glob": "^3.2.11",
+    "hint": "^6.1.9",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "readable-stream": "^3.6.0",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.3.0",
+    "stylelint-config-standard": "^24.0.0",
+    "stylelint-csstree-validator": "^2.0.0",
+    "stylelint-scss": "^4.1.0",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
