@@ -22,6 +22,7 @@ const addScore = async (name, score, apiEndPoint, idLink, htmlElementToPostSucce
   setTimeout(() => {
     htmlElementToPostSuccesfulMessage.innerHTML = '';
   }, 6000);
+  return responseFromServer;
 };
 
 const getScores = async (apiEndPoint, idLink, htmlElementToPostSuccesfulMessage) => {
