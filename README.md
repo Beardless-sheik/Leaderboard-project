@@ -5,7 +5,7 @@
 
 ## Description
 
-> Leaderboard list app, using webpack and ES6 features, notably modules. The project consumes data from the Leaderboard API using JavaScript async and await.
+> Leaderboard list app, using webpack and ES6 features, notably modules. The project consumes data from the Leaderboard API using JavaScript async and await. It is [live here](https://beardless-sheik.github.io/Leaderboard-project/) for a demo of the project
 
 
 ## Built With
@@ -14,7 +14,8 @@ This project is build with:
 
 - HTML
 - CSS
-- Javascript
+- Vanilla Javascript
+
 
 ## Getting Started
 
@@ -52,6 +53,10 @@ For tracking linter errors locally you need to follow these steps:
 - And for tracking the linter errors in JS files run:
 
   > npx eslint .
+
+- To run tests (project uses the [Jest](https://jestjs.io/) framework) you can run the following npm script in your command line:
+
+  > npx run test
 
 
 ## 👤 Author
